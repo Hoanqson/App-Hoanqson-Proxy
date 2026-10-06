@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HoanqSon Proxy</string>
+    <string name="vpn_permission_denied">Cần cấp quyền VPN để hoạt động</string>
+</resources>

@@ -1,0 +1,53 @@
+# ==============================================================================
+# Android / Gradle Build Ignored Files
+# ==============================================================================
+*.iml
+.gradle
+/build
+/*/build
+build/
+app/build/
+captures/
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+
+# ==============================================================================
+# Local SDK and Environment Configuration
+# ==============================================================================
+local.properties
+.env
+.env.*
+!.env.example
+
+# ==============================================================================
+# IDE Files (Android Studio / IntelliJ)
+# ==============================================================================
+.idea/
+!.idea/copyright/profiles_settings.xml
+!.idea/codeStyles/Project.xml
+!.idea/codeStyles/codeStyleConfig.xml
+*.ipr
+*.iws
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+packageDebug.log
+
+# ==============================================================================
+# Security & Credentials - DO NOT COMMIT SECRETS OR KEYSTORES
+# ==============================================================================
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.pk8
+signing.properties
+release-keystore.properties
