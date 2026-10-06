@@ -17,7 +17,7 @@ Tài liệu này được soạn thảo riêng cho các AI Coding Agent (Antigra
 
 ## 2. Các quy tắc cấm kỵ (Strict Project Rules)
 
-1. **KHÔNG đổi Package Name**: Package name cố định là `vn.homeproxy.keyrotator`.
+1. **KHÔNG đổi Package Name**: Package name cố định là `app.hoanqson.proxy`.
 2. **KHÔNG đổi HomeProxy API**: Endpoint cố định là `https://app.homeproxy.vn/api/v3/users/rotatev2`. Khi kiểm tra key bắt buộc phải có `checkOnly=true`. Tuyệt đối không xóa cờ này vì sẽ làm hao tốn lượt đổi IP của khách hàng.
 3. **KHÔNG đổi Supabase Architecture**:
    - Sử dụng PostgREST qua HTTPS.
@@ -34,7 +34,7 @@ Tài liệu này được soạn thảo riêng cho các AI Coding Agent (Antigra
 
 | Hạng mục | Trạng thái thực tế | Ghi chú kỹ thuật |
 | :--- | :---: | :--- |
-| **Package Name** | `vn.homeproxy.keyrotator` | Chuẩn hóa toàn bộ Manifest và Kotlin files |
+| **Package Name** | `app.hoanqson.proxy` | Chuẩn hóa toàn bộ Manifest và Kotlin files |
 | **Version** | `1.1.0` (versionCode 3) | Target Android 14 (API 34), Min SDK 26 |
 | **Build Debug** | **PASS** | `./gradlew assembleDebug` thành công 100% |
 | **Build Release** | **PASS** | `./gradlew assembleRelease` thành công 100% |

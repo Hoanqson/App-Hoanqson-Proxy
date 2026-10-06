@@ -23,7 +23,7 @@ Tài liệu này ghi lại chi tiết các cơ chế bảo mật đã triển kh
 ### 1.3. Bảo vệ mã nguồn (R8 / ProGuard Obfuscation)
 - **Minification & Shrinking**: Bản Release được bật `minifyEnabled true` và `shrinkResources true`.
 - **Rút gọn và làm mờ**: Toàn bộ tên biến, phương thức và lớp nội bộ được làm mờ (obfuscate), gây khó khăn tối đa cho việc dịch ngược (reverse-engineering).
-- **Keep Rules tối thiểu**: Chỉ giữ lại các model parse JSON qua reflection (`vn.homeproxy.keyrotator.model.**`), JNI native interface (`engine.**`) và VpnService để đảm bảo hiệu năng và tính ổn định.
+- **Keep Rules tối thiểu**: Chỉ giữ lại các model parse JSON qua reflection (`app.hoanqson.proxy.model.**`), JNI native interface (`engine.**`) và VpnService để đảm bảo hiệu năng và tính ổn định.
 
 ### 1.4. Quản lý Secret & Phân quyền Supabase Cloud
 - **Không nhúng Private Secret vào APK**: Toàn bộ mã nguồn và cấu hình build không chứa `service_role`, `sb_secret`, private signing key hay database password.

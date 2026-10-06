@@ -1,10 +1,10 @@
-package vn.homeproxy.keyrotator.database
+package app.hoanqson.proxy.database
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.util.AppLogger
 
 class AppDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 

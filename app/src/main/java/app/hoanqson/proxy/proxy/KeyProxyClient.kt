@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.proxy
+package app.hoanqson.proxy.proxy
 
 import com.google.gson.Gson
 import com.google.gson.JsonObject
@@ -6,8 +6,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import vn.homeproxy.keyrotator.model.ProxyConfig
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.model.ProxyConfig
+import app.hoanqson.proxy.util.AppLogger
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
@@ -51,7 +51,7 @@ class KeyProxyClient(
     /**
      * Checks and gets current proxy without rotating IP (checkOnly=true)
      */
-    suspend fun getCurrentProxy(token: String, preferredType: vn.homeproxy.keyrotator.model.ProxyType = vn.homeproxy.keyrotator.model.ProxyType.HTTP): KeyProxyResult = withContext(Dispatchers.IO) {
+    suspend fun getCurrentProxy(token: String, preferredType: app.hoanqson.proxy.model.ProxyType = app.hoanqson.proxy.model.ProxyType.HTTP): KeyProxyResult = withContext(Dispatchers.IO) {
         val trimmedToken = token.trim()
         if (trimmedToken.isEmpty()) {
             return@withContext KeyProxyResult.Failure(
@@ -67,7 +67,7 @@ class KeyProxyClient(
     /**
      * Requests rotation to a new proxy IP
      */
-    suspend fun rotateProxy(token: String, preferredType: vn.homeproxy.keyrotator.model.ProxyType = vn.homeproxy.keyrotator.model.ProxyType.HTTP): KeyProxyResult = withContext(Dispatchers.IO) {
+    suspend fun rotateProxy(token: String, preferredType: app.hoanqson.proxy.model.ProxyType = app.hoanqson.proxy.model.ProxyType.HTTP): KeyProxyResult = withContext(Dispatchers.IO) {
         val trimmedToken = token.trim()
         if (trimmedToken.isEmpty()) {
             return@withContext KeyProxyResult.Failure(
@@ -80,7 +80,7 @@ class KeyProxyClient(
         executeApiCall(url, preferredType)
     }
 
-    private fun executeApiCall(url: String, preferredType: vn.homeproxy.keyrotator.model.ProxyType = vn.homeproxy.keyrotator.model.ProxyType.HTTP): KeyProxyResult {
+    private fun executeApiCall(url: String, preferredType: app.hoanqson.proxy.model.ProxyType = app.hoanqson.proxy.model.ProxyType.HTTP): KeyProxyResult {
         AppLogger.d("Calling KeyProxy API: $url")
         val request = Request.Builder()
             .url(url)

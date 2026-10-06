@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.model
+package app.hoanqson.proxy.model
 
 /**
  * State representing current proxy connection

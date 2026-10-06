@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.net
+package app.hoanqson.proxy.net
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -6,7 +6,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.util.AppLogger
 import java.util.concurrent.TimeUnit
 
 /**

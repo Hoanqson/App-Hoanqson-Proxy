@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.proxy
+package app.hoanqson.proxy.proxy
 
 import com.google.gson.Gson
 import com.google.gson.JsonObject
@@ -6,7 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.util.AppLogger
 import java.net.InetSocketAddress
 import java.net.Proxy
 import java.util.concurrent.TimeUnit
@@ -75,7 +75,7 @@ class IpChecker(
     /**
      * Checks if the given proxy (or direct connection) is alive and returns the public IP
      */
-    suspend fun checkProxyLive(proxy: vn.homeproxy.keyrotator.model.ProxyConfig): Pair<Boolean, String?> = withContext(Dispatchers.IO) {
+    suspend fun checkProxyLive(proxy: app.hoanqson.proxy.model.ProxyConfig): Pair<Boolean, String?> = withContext(Dispatchers.IO) {
         val clientBuilder = httpClient.newBuilder()
             .proxy(Proxy(Proxy.Type.HTTP, InetSocketAddress(proxy.host, proxy.port)))
 

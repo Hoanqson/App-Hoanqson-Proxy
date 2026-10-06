@@ -1,10 +1,10 @@
-package vn.homeproxy.keyrotator.storage
+package app.hoanqson.proxy.storage
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.util.AppLogger
 
 /**
  * Storage manager using Android Keystore backed EncryptedSharedPreferences
@@ -65,16 +65,16 @@ class SecureKeyStorage(context: Context) {
         return prefs.getInt(KEY_AUTO_ROTATE_INTERVAL, 120) // default 120s
     }
 
-    fun saveProxyType(type: vn.homeproxy.keyrotator.model.ProxyType) {
+    fun saveProxyType(type: app.hoanqson.proxy.model.ProxyType) {
         prefs.edit().putString(KEY_PROXY_TYPE, type.name).apply()
     }
 
-    fun getProxyType(): vn.homeproxy.keyrotator.model.ProxyType {
-        val typeName = prefs.getString(KEY_PROXY_TYPE, vn.homeproxy.keyrotator.model.ProxyType.HTTP.name)
+    fun getProxyType(): app.hoanqson.proxy.model.ProxyType {
+        val typeName = prefs.getString(KEY_PROXY_TYPE, app.hoanqson.proxy.model.ProxyType.HTTP.name)
         return try {
-            vn.homeproxy.keyrotator.model.ProxyType.valueOf(typeName ?: vn.homeproxy.keyrotator.model.ProxyType.HTTP.name)
+            app.hoanqson.proxy.model.ProxyType.valueOf(typeName ?: app.hoanqson.proxy.model.ProxyType.HTTP.name)
         } catch (e: Exception) {
-            vn.homeproxy.keyrotator.model.ProxyType.HTTP
+            app.hoanqson.proxy.model.ProxyType.HTTP
         }
     }
 

@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.vpn
+package app.hoanqson.proxy.vpn
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -26,14 +26,14 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import vn.homeproxy.keyrotator.MainActivity
-import vn.homeproxy.keyrotator.model.ProxyConfig
-import vn.homeproxy.keyrotator.model.ProxyStatus
-import vn.homeproxy.keyrotator.proxy.IpChecker
-import vn.homeproxy.keyrotator.proxy.KeyProxyClient
-import vn.homeproxy.keyrotator.proxy.KeyProxyResult
-import vn.homeproxy.keyrotator.storage.SecureKeyStorage
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.MainActivity
+import app.hoanqson.proxy.model.ProxyConfig
+import app.hoanqson.proxy.model.ProxyStatus
+import app.hoanqson.proxy.proxy.IpChecker
+import app.hoanqson.proxy.proxy.KeyProxyClient
+import app.hoanqson.proxy.proxy.KeyProxyResult
+import app.hoanqson.proxy.storage.SecureKeyStorage
+import app.hoanqson.proxy.util.AppLogger
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -232,7 +232,7 @@ class KeyProxyVpnService : VpnService() {
 
                             // Lưu lịch sử xoay thật vào SQLite Database
                             try {
-                                vn.homeproxy.keyrotator.database.AppDatabaseHelper.getInstance(applicationContext)
+                                app.hoanqson.proxy.database.AppDatabaseHelper.getInstance(applicationContext)
                                     .insertRotationHistory(
                                         oldProxy = if (oldProxyStr.isNotBlank()) oldProxyStr else "Chưa có",
                                         newProxy = result.proxy.toFormattedString()
@@ -555,9 +555,9 @@ class KeyProxyVpnService : VpnService() {
         const val CHANNEL_ID = "key_proxy_channel"
         const val NOTIFICATION_ID = 1001
 
-        const val ACTION_CONNECT = "vn.homeproxy.keyrotator.CONNECT"
-        const val ACTION_DISCONNECT = "vn.homeproxy.keyrotator.DISCONNECT"
-        const val ACTION_ROTATE = "vn.homeproxy.keyrotator.ROTATE"
+        const val ACTION_CONNECT = "app.hoanqson.proxy.CONNECT"
+        const val ACTION_DISCONNECT = "app.hoanqson.proxy.DISCONNECT"
+        const val ACTION_ROTATE = "app.hoanqson.proxy.ROTATE"
 
         const val EXTRA_TOKEN = "extra_token"
     }

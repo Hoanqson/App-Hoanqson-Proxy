@@ -26,7 +26,7 @@ Trước khi tiến hành sửa đổi bất kỳ tệp tin nào trong repositor
 
 - **KHÔNG** refactor lớn các đoạn mã đang hoạt động ổn định.
 - **KHÔNG** xóa bất kỳ tính năng hiện có nào (Connect, Disconnect, Rotate, Auto Rotate, Timer, Settings, History, v.v.).
-- **KHÔNG** thay đổi package name `vn.homeproxy.keyrotator`.
+- **KHÔNG** thay đổi package name `app.hoanqson.proxy`.
 - **KHÔNG** thay đổi endpoint HomeProxy API hay xóa cờ `checkOnly=true`.
 - **KHÔNG** commit các file chứa secret, keystore, token hoặc credential thật lên Git.
 - **KHÔNG** sửa cấu hình native packaging (`useLegacyPackaging` và `extractNativeLibs`).

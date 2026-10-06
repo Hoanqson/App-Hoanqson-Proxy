@@ -9,7 +9,7 @@ Tài liệu này ghi lại chi tiết cấu trúc bảng, các trường dữ li
 - **Tên cơ sở dữ liệu**: `hoanqson_proxy.db`
 - **Lớp quản trị**: `AppDatabaseHelper` kế thừa `SQLiteOpenHelper`.
 - **Phiên bản hiện tại**: `1`
-- **Vị trí trên thiết bị**: `/data/data/vn.homeproxy.keyrotator/databases/hoanqson_proxy.db`
+- **Vị trí trên thiết bị**: `/data/data/app.hoanqson.proxy/databases/hoanqson_proxy.db`
 
 ### 1.1. Bảng `proxy_keys` (Quản lý các Proxy Key đã nhập)
 Lưu trữ danh sách các key người dùng đã kiểm tra và lưu trên máy:

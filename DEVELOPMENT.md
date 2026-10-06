@@ -109,7 +109,7 @@ flowchart TD
 
 ## 4. Hướng dẫn thêm tính năng mới an toàn
 
-1. **Tuyệt đối không đổi package name**: `vn.homeproxy.keyrotator` đã gắn liền với cấu hình manifest và signing.
+1. **Tuyệt đối không đổi package name**: `app.hoanqson.proxy` đã gắn liền với cấu hình manifest và signing.
 2. **Không sửa param của API HomeProxy**: Cờ `checkOnly=true` là bắt buộc khi chỉ kiểm tra key.
 3. **Giữ nguyên cấu hình JNI**: Không sửa đổi `useLegacyPackaging = true` và `extractNativeLibs = true` trong gradle/manifest để tránh lỗi phân tích cú pháp gói trên Android 14.
 4. **Kiểm tra R8 khi thêm class mới**: Bất kỳ model nào parse JSON qua Gson cần được khai báo keep rule trong `proguard-rules.pro`.

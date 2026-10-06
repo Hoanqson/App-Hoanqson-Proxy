@@ -8,7 +8,7 @@
 
 **HoanqSon Proxy** được thiết kế để định tuyến toàn bộ lưu lượng mạng của thiết bị Android qua proxy bảo mật (hỗ trợ HTTP, HTTPS, SOCKS5). Ứng dụng hỗ trợ kiểm tra tính hợp lệ của Proxy Key, xoay IP định kỳ tự động, hiển thị thông số đo đạc mạng thực tế và đồng bộ nhật ký kiểm tra key lên Supabase Cloud dành cho quản trị viên.
 
-- **Package Name**: `vn.homeproxy.keyrotator`
+- **Package Name**: `app.hoanqson.proxy`
 - **Phiên bản hiện tại**: `v1.1.0` (versionCode 3)
 - **Hệ điều hành mục tiêu**: Tối ưu Android 14 (API 34), hỗ trợ tối thiểu từ Android 8.0 (API 26).
 

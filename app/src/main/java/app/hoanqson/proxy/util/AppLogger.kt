@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.util
+package app.hoanqson.proxy.util
 
 import android.util.Log
 
@@ -9,7 +9,7 @@ import android.util.Log
 object AppLogger {
     private const val DEFAULT_TAG = "KeyProxy"
 
-    var isDebugEnabled: Boolean = vn.homeproxy.keyrotator.BuildConfig.DEBUG
+    var isDebugEnabled: Boolean = app.hoanqson.proxy.BuildConfig.DEBUG
 
     fun d(message: String, tag: String = DEFAULT_TAG) {
         if (isDebugEnabled) {

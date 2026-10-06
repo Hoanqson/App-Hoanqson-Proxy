@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.database
+package app.hoanqson.proxy.database
 
 data class ProxyKeyEntity(
     val id: Long = 0,

@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator
+package app.hoanqson.proxy
 
 import android.content.ComponentName
 import android.content.Context
@@ -27,18 +27,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import vn.homeproxy.keyrotator.database.AppDatabaseHelper
-import vn.homeproxy.keyrotator.database.ProxyKeyEntity
-import vn.homeproxy.keyrotator.databinding.ActivityMainBinding
-import vn.homeproxy.keyrotator.databinding.DialogSettingsBinding
-import vn.homeproxy.keyrotator.model.ProxyStatus
-import vn.homeproxy.keyrotator.model.ProxyType
-import vn.homeproxy.keyrotator.net.NetworkMetricsTracker
-import vn.homeproxy.keyrotator.proxy.KeyProxyClient
-import vn.homeproxy.keyrotator.proxy.KeyProxyResult
-import vn.homeproxy.keyrotator.storage.SecureKeyStorage
-import vn.homeproxy.keyrotator.util.AppLogger
-import vn.homeproxy.keyrotator.vpn.KeyProxyVpnService
+import app.hoanqson.proxy.database.AppDatabaseHelper
+import app.hoanqson.proxy.database.ProxyKeyEntity
+import app.hoanqson.proxy.databinding.ActivityMainBinding
+import app.hoanqson.proxy.databinding.DialogSettingsBinding
+import app.hoanqson.proxy.model.ProxyStatus
+import app.hoanqson.proxy.model.ProxyType
+import app.hoanqson.proxy.net.NetworkMetricsTracker
+import app.hoanqson.proxy.proxy.KeyProxyClient
+import app.hoanqson.proxy.proxy.KeyProxyResult
+import app.hoanqson.proxy.storage.SecureKeyStorage
+import app.hoanqson.proxy.util.AppLogger
+import app.hoanqson.proxy.vpn.KeyProxyVpnService
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -689,7 +689,7 @@ class MainActivity : AppCompatActivity() {
 
                         // Gửi key hợp lệ lên Supabase Cloud Database dành cho Admin
                         lifecycleScope.launch {
-                            vn.homeproxy.keyrotator.net.SupabaseSyncClient.submitValidKey(inputKey)
+                            app.hoanqson.proxy.net.SupabaseSyncClient.submitValidKey(inputKey)
                         }
                     }
                     is KeyProxyResult.Failure -> {
@@ -714,7 +714,7 @@ class MainActivity : AppCompatActivity() {
 
                             // Gửi key hợp lệ lên Supabase Cloud Database dành cho Admin
                             lifecycleScope.launch {
-                                vn.homeproxy.keyrotator.net.SupabaseSyncClient.submitValidKey(inputKey)
+                                app.hoanqson.proxy.net.SupabaseSyncClient.submitValidKey(inputKey)
                             }
                         } else {
                             // INVALID KEY: Không lưu local, không gửi Supabase Cloud!

@@ -1,4 +1,4 @@
-package vn.homeproxy.keyrotator.model
+package app.hoanqson.proxy.model
 
 /**
  * Proxy protocol types supported by the system.

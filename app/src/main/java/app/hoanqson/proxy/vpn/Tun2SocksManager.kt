@@ -1,10 +1,10 @@
-package vn.homeproxy.keyrotator.vpn
+package app.hoanqson.proxy.vpn
 
 import android.os.ParcelFileDescriptor
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import vn.homeproxy.keyrotator.model.ProxyConfig
-import vn.homeproxy.keyrotator.util.AppLogger
+import app.hoanqson.proxy.model.ProxyConfig
+import app.hoanqson.proxy.util.AppLogger
 
 /**
  * Manages the native tun2socks engine lifecycle (Go core via engine.Engine)
