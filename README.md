@@ -1,21 +1,24 @@
-# HoanqSon Proxy 🚀
+# HoanqSon Proxy v1.1.0
 
-Ứng dụng Android hỗ trợ kết nối, kiểm tra và xoay Proxy nhanh chóng với giao diện hiện đại, tối ưu cho điện thoại.
+Ứng dụng Android hỗ trợ kết nối, kiểm tra và xoay Proxy.
 
-## 📥 Tải ứng dụng (Download APK)
+## Tính năng
 
-👉 **[Tải bản phát hành mới nhất tại đây (Releases)](https://github.com/Hoanqson/App-Hoanqson-Proxy/releases/tag/v1.1.0)**
+- Kết nối / ngắt kết nối Proxy
+- Xoay Proxy thủ công
+- Tự động xoay Proxy theo thời gian
+- Kiểm tra Ping, Download và Upload
+- Xem lịch sử Proxy
+- Hỗ trợ thời gian xoay tùy chỉnh
 
----
+## Proxy Key
 
-### ✨ Tính năng chính
-- 🔌 Kết nối / ngắt kết nối Proxy
-- 🔄 Xoay Proxy thủ công
-- ⏱️ Tự động xoay theo thời gian
-- 📊 Kiểm tra Ping / Download / Upload
-- 📜 Lịch sử Proxy
-- 🌙 Giao diện Dark + Glassmorphism
-- 📱 Tối ưu cho Android 8.0+
+Lấy Proxy Key tại:
 
-### 🔑 Lấy Proxy Key
-Bạn có thể lấy Proxy Key tại: [proxy.robuxreward.top](https://proxy.robuxreward.top?utm_source=chatgpt.com)
+[proxy.robuxreward.top](https://proxy.robuxreward.top?utm_source=chatgpt.com)
+
+## Cài đặt
+
+Tải file [app-release.apk](https://github.com/Hoanqson/App-Hoanqson-Proxy/releases/download/v1.1.0/app-release.apk) và cài đặt trên thiết bị Android.
+
+Yêu cầu Android 8.0 trở lên.
